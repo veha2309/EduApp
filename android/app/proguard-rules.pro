@@ -8,3 +8,24 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+# React Native
+-keep class com.facebook.react.** { *; }
+-keep class com.facebook.hermes.** { *; }
+-keep class com.facebook.jni.** { *; }
+
+# Vector Icons
+-keep class com.oblador.vectoricons.** { *; }
+
+# Reanimated
+-keep class com.swmansion.reanimated.** { *; }
+
+# Gesture Handler
+-keep class com.swmansion.gesturehandler.** { *; }
+
+# Remove debug logs
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+}
